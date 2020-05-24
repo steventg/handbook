@@ -1,4 +1,4 @@
-## Temporarily Skip Luks Login
+## Save Keyfile in /boot
 1. Create a Luks keyfile
     ```
     sudo dd if=/dev/urandom of=/boot/keyfile bs=1024 count=4
@@ -11,6 +11,9 @@
     ```
  
  1. ```sudo update-initramfs -u & sudo reboot```
+ 
+ ## Save Keyfile in a USB drive
+ https://askubuntu.com/questions/59487/how-to-configure-lvm-luks-to-autodecrypt-partition
 
  
 ## Fix /etc/crypttab
