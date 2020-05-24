@@ -1,3 +1,18 @@
+## Temporarily Skip Luks Login
+1. Create a Luks keyfile
+    ```
+    sudo dd if=/dev/urandom of=/boot/keyfile bs=1024 count=4
+    sudo chmod 0400 /boot/keyfile
+    cryptsetup -v luksAddKey /dev/sda3 /boot/keyfile
+    ````
+ 1. Update `/etc/crypttab`
+    ```
+    nvme0n1p3_crypt UUID=<UUID of /> /dev/disk/by-uuid/<UUID of /boot>:/boot/keyfile luks,keyscript=/lib/cryptsetup/scripts/passdev
+    ```
+ 
+ 1. ```sudo update-initramfs -u & sudo reboot```
+
+ 
 ## Fix /etc/crypttab
 
 1. Boot with Ubuntu 20.04 
