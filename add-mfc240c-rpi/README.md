@@ -1,6 +1,6 @@
 ## Adding MFC-240C Printer to Raspberry Pi
 
-Brother provides the LPR and CUPS driver but it is in i386 architecture.
+Brother provides the LPR and CUPS drivers but they are only in i386 architecture.
 
 # Pre-req
 1. Install CUPS
@@ -13,8 +13,8 @@ dpkg -i --force-all mfc240clpr-1.0.1-1.i386.deb
 dpkg -i --force-all mfc240ccupswrapper-1.0.1-1.i386.deb
 ```
 
-Note: The installation will failure complaining some directories are not created.
-Create them and re-run again
+Note: The installation will fail complaining some directories were not created.
+Create them and re-run again.
 
 # Install QEMU
 https://wiki.debian.org/QemuUserEmulation
