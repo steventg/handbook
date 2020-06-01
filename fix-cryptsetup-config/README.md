@@ -18,7 +18,7 @@
  
 ## Fix /etc/crypttab
 
-1. Boot with Ubuntu 20.04 
+1. Boot with Ubuntu 20.04 Live USB
 1. ```sudo modprobe dm-crypt```
 1. ```sudo fdisk -l```
 1. ```sudo cryptsetup luksOpen /dev/nvme0n1p3```
